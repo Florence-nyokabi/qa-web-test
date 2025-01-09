@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './AlbumsPage.css'; 
 
+
 const AlbumsPage = () => {
     const [albums, setAlbums] = useState([]); 
     const [loading, setLoading] = useState(true); 
@@ -77,7 +78,7 @@ const AlbumsPage = () => {
             <ul>
                 {filteredAlbums.length > 0 ? (
                     filteredAlbums.map((album) => (
-                        <li key={album.id}>
+                        <li key={album.id} className="album-item">
                             <strong>{album.title}</strong> (Album ID: {album.id})
                         </li>
                     ))
